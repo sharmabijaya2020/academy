@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.authService.retrieveUser();
+    // this.authService.retrieveUser();
     this.roles = [
       { value: "Principal", viewValue: "Principal" },
       { value: "Class-Teacher", viewValue: "Class-Teacher" },
