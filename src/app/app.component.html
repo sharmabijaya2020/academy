@@ -1,0 +1,14 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav1 mode="side" opened="false">
+
+        <sidenav [sideNavigation]="sidenav1"></sidenav>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <header [sideNavigation]="sidenav1" (openSidenav)="toggleSideNav()">
+        </header>
+        <router-outlet></router-outlet>
+        <footer></footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

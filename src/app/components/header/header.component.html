@@ -1,0 +1,29 @@
+<!-- <div class="header" fxLayout="row" FxLayoutAlign="center center">
+    <div class="login" FxLayout FxLayoutAlign="right">
+        Login
+    </div>
+
+</div> -->
+
+<div>
+    <mat-toolbar class="header">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sideNavigation.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Academy App</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <a routerLink="login">Login</a>
+            <!-- <mat-icon>login</mat-icon> -->
+
+        </button>
+        <button mat-raised-button class="example-icon" aria-label="Example icon-button with share icon">
+            <!-- <mat-icon>signup</mat-icon> -->
+            <a routerLink="signup">Signup</a>
+        </button>
+        <button mat-raised-button class="example-icon" aria-label="Example icon-button with share icon" (click)="logout()">
+            <!-- <mat-icon>signup</mat-icon> -->
+            <a style="text-decoration: underline">Logout</a>
+        </button>
+    </mat-toolbar>
+</div>

@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    /* background-color: yellowgreen; */
+    padding: 10px;
+    justify-items: center;
+}
+
+.sign-up {
+    /* background-color: yellowgreen; */
+    border: 2px solid black;
+    width: 550px;
+    /* justify-items: center;
+    justify-self: center; */
+    padding: 10px;
+    margin-left: 400px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+h3 {
+    align-content: center;
+}
+
+mat-form-field {
+    padding: 10px
+}

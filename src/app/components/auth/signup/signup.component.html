@@ -1,0 +1,95 @@
+<!-- <section>
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field fxLayout="row" fxLayoutGap="10px">
+            <input matInput type="text" name="firstname" placeholder="Enter your First Name">
+        </mat-form-field>
+        <mat-form-field fxLayout="row" fxLayoutGap="10px">
+            <input matInput type="text" name="middlename" placeholder="Enter your Middle Name"> 
+        </mat-form-field>
+        <mat-form-field fxLayout="row" fxLayoutGap="10px">
+            <input matInput type="text" name="lasstname" placeholder="Enter your Last Name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="email" name="firstname" placeholder="Enter your email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="phone" placeholder="Enter your Phone Number">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="date" name="dob" placeholder="Enter your Date of Birth">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" name="password" placeholder="Enter your Password">
+        </mat-form-field>
+    </form>
+</section> -->
+<section class="sign-up">
+
+    <form #signupForm="ngForm" (submit)="onSubmitSignupForm(signupForm)">
+        <mat-grid-list cols="4" rowHeight="100px" class="grid-container">
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <h3>Student Enrollment Form:</h3>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <mat-form-field>
+                    <input matInput type="text" name="firstname" placeholder="Enter your First Name" ngModel #fname="ngModel">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" name="middlename" placeholder="Enter your Middle Name" ngModel #mname="ngModel">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <mat-form-field>
+                    <input matInput type="text" name="lastname" placeholder="Enter your Last Name" ngModel #lname="ngModel">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="email" name="email" placeholder="Enter your email" ngModel #email="ngModel">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <mat-form-field>
+                    <input matInput type="text" name="phone" placeholder="Enter your Phone Number" ngModel #phone="ngModel">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="date" name="dob" placeholder="Enter your Date of Birth" ngModel #dob="ngModel">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <mat-form-field>
+                    <input matInput type="text" name="pw1" placeholder="Enter your Password" ngModel #pw1="ngModel">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" name="pw2" placeholder="Re-Enter your Password" ngModel #pw2="ngModel">
+                </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <mat-form-field>
+                    <!-- <mat-label>role</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let role of roles" name="role" [value]="role.value">
+                            {{role.viewValue}}
+                        </mat-option>
+                    </mat-select> -->
+                    <input matInput type="text" name="grade" placeholder="Enter your Grade" ngModel #grade="ngModel">
+                </mat-form-field>
+                <!-- <mat-form-field> -->
+                <label>Gender: </label>
+                <mat-radio-group aria-label="Gender" name="gender" ngModel #gender="ngModel">
+                    <mat-radio-button matInput name="male" value="male">Male</mat-radio-button>
+                    <mat-radio-button matInput name="female" value="female">Female</mat-radio-button>
+                </mat-radio-group>
+                <!-- </mat-form-field> -->
+
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="4" [rowspan]="1">
+                <button mat-raised-button color="primary" [disabled]="false">Submit</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+    </form>
+</section>
